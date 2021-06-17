@@ -1,0 +1,55 @@
+:root {
+  --border-radius-1: 10px;
+  --border-radius-2: 8px;
+}
+/* eliminate shadows */
+div, img, ul {
+  box-shadow: none !important;
+}
+/* eliminate gradients */
+.main-home-homeHeader, .main-actionBarBackground-background {
+  background-image: none;
+}
+.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background {
+  background-color: var(--spice-main) !important;
+}
+.playlist-playlist-playlist .main-entityHeader-overlay, .profile-userOverview-user .main-entityHeader-overlay {
+  background: var(--spice-main);
+}
+/* eliminate dividers */
+.main-trackList-trackListHeaderRow {
+  border-bottom: none;
+}
+.now-playing-bar-container {
+  border-top: none;
+}
+.main-rootlist-rootlistDivider {
+  display: none;
+}
+/* cards */
+.main-cardImage-image {
+  border-radius: var(--border-radius-2);
+}
+.main-card-card {
+  border-radius: var(--border-radius-1);
+}
+/* transitions */
+.main-card-card {
+  transition: background-color 150ms ease;
+}
+.link-subtle {
+  transition-duration: 150ms;
+}
+/* player */
+.progress-bar {
+  --fg-color: var(--spice-button-active);
+}
+/* menus */
+.main-contextMenu-menuItemButton {
+  border-radius: var(--border-radius-2);
+  margin: 2px;
+}
+.main-contextMenu-menu {
+  border-radius: var(--border-radius-1);
+  border: 1px solid var(--spice-button-disabled);
+}
