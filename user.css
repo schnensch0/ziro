@@ -1,12 +1,21 @@
 :root {
   --border-radius-1: 10px;
   --border-radius-2: 8px;
+  --scrollbars: unset;
 }
-/* eliminate shadows */
+/* scrollbars */
+.os-scrollbar {
+  display: var(--scrollbars);
+}
+.os-scrollbar-handle {
+  border-radius: 50px;
+  background: var(--spice-button-disabled) !important;
+}
+/* remove shadows */
 div, img, ul {
   box-shadow: none !important;
 }
-/* eliminate gradients */
+/* remove gradients */
 .main-home-homeHeader, .main-actionBarBackground-background {
   background-image: none;
 }
@@ -16,14 +25,14 @@ div, img, ul {
 .playlist-playlist-playlist .main-entityHeader-overlay, .profile-userOverview-user .main-entityHeader-overlay {
   background: var(--spice-main);
 }
-/* eliminate dividers */
+/* remove dividers */
 .main-trackList-trackListHeaderRow {
   border-bottom: none;
 }
 .now-playing-bar-container {
   border-top: none;
 }
-.main-rootlist-rootlistDivider {
+.main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after {
   display: none;
 }
 /* cards */
@@ -48,6 +57,7 @@ div, img, ul {
 .main-contextMenu-menuItemButton {
   border-radius: var(--border-radius-2);
   margin: 2px;
+  color: var(--spice-text);
 }
 .main-contextMenu-menu {
   border-radius: var(--border-radius-1);
