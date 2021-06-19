@@ -22,24 +22,24 @@ div, img, ul {
 .main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background {
   background-color: var(--spice-main) !important;
 }
-.playlist-playlist-playlist .main-entityHeader-overlay, .profile-userOverview-user .main-entityHeader-overlay {
+.main-entityHeader-backgroundColor {
   background: var(--spice-main);
 }
 /* remove dividers */
 .main-trackList-trackListHeaderRow {
   border-bottom: none;
 }
-.now-playing-bar-container {
+.now-playing-bar-container, ._6e96ad0ba78d75ffb2a0156aa1834a21-scss {
   border-top: none;
 }
 .main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after {
   display: none;
 }
 /* cards */
-.main-cardImage-image {
+.main-cardImage-image, .main-cardImage-imageWrapper {
   border-radius: var(--border-radius-2);
 }
-.main-card-card {
+.main-card-card, .x-heroCategoryCard-HeroCategoryCard, .x-categoryCard-CategoryCard, .main-heroCard-card {
   border-radius: var(--border-radius-1);
 }
 /* transitions */
@@ -53,13 +53,91 @@ div, img, ul {
 .progress-bar {
   --fg-color: var(--spice-button-active);
 }
-/* menus */
-.main-contextMenu-menuItemButton {
-  border-radius: var(--border-radius-2);
-  margin: 2px;
-  color: var(--spice-text);
+/* headers */
+.main-entityHeader-withBackgroundImage {
+  border-radius: var(--border-radius-1);
 }
-.main-contextMenu-menu {
+/* menus */
+.main-contextMenu-menuItemButton, ._8e566af0d3a8e6834c933615bbb634ba-scss {
+  border-radius: var(--border-radius-2);
+  color: var(--spice-text);
+  height: 32px;
+}
+.main-contextMenu-menuItem, ._60cb742e518d084c3c959007b9463b51-scss > li {
+  margin: 2px 6px;
+}
+.main-contextMenu-menuItem:first-child, ._60cb742e518d084c3c959007b9463b51-scss > :first-child {
+  margin: 6px 6px 2px;
+}
+.main-contextMenu-menuItem:last-child {
+  margin: 2px 6px 6px;
+}
+._60cb742e518d084c3c959007b9463b51-scss > :last-child {
+  margin: 2px 6px 8px;
+}
+.main-contextMenu-menu, ._60cb742e518d084c3c959007b9463b51-scss {
   border-radius: var(--border-radius-1);
   border: 1px solid var(--spice-button-disabled);
+}
+/* buttons */
+.main-playButton-PlayButton.main-playButton-primary {
+  color: var(--spice-card);
+}
+.player-controls__buttons > button:not(.main-playPauseButton-button), .control-button {
+  color: var(--spice-button);
+}
+/* category sidebar */
+.main-navBar-navBarLink {
+  border-radius: var(--border-radius-2);
+  color: var(--spice-text);
+}
+.main-navBar-navBarLink:hover {
+  background-color: rgba(var(--spice-rgb-button),.05);
+}
+.main-navBar-navBarLink:active {
+  background-color: rgba(var(--spice-rgb-button),.1);
+}
+.main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:hover, .main-navBar-navBarLinkActive:active, .main-navBar-navBarLinkActive:focus {
+  background-color: var(--spice-button);
+  color: var(--spice-card);
+}
+/* playlist sidebar */
+.main-createPlaylistButton-button, ._6b5bc370e9834a4932f57284a96a0748-scss, ._928aa704d6ac22c1e288a4ddbed11a40-scss {
+  opacity: 1 !important;
+}
+._6b5bc370e9834a4932f57284a96a0748-scss, .main-createPlaylistButton-button, .main-createPlaylistButton-svg, .ac0df040748287f39652cc42e3b762ba-scss {
+  border-radius: var(--border-radius-2);
+}
+.main-rootlist-rootlistPlaylistsScrollNode {
+  margin-top: 24px;
+}
+.main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited, .main-rootlist-rootlistPlaylistHeader {
+  color: var(--spice-text);
+}
+.ac0df040748287f39652cc42e3b762ba-scss, .main-createPlaylistButton-button {
+  margin: 0 8px;
+  padding: 5px 12px;
+}
+.main-createPlaylistButton-button {
+  width: -webkit-fill-available;
+}
+.main-rootlist-rootlistItem {
+  padding: 0 8px;
+}
+.main-rootlist-rootlistItemLink {
+  height: 32px;
+  border-radius: var(--border-radius-2);
+  padding: 0 12px;
+}
+.main-rootlist-rootlistItemLink:hover, .main-createPlaylistButton-button:hover, .ac0df040748287f39652cc42e3b762ba-scss:hover {
+  background-color: rgba(var(--spice-rgb-button),.05);
+}
+.main-rootlist-rootlistItemLink:active, .main-createPlaylistButton-button:active, .ac0df040748287f39652cc42e3b762ba-scss:active {
+  background-color: rgba(var(--spice-rgb-button),.1);
+}
+.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
+  background-color: var(--spice-button);
+}
+.main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
+  color: var(--spice-card);
 }
