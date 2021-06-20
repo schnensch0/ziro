@@ -16,6 +16,5 @@ previews coming soon
 * FIX EVERYTHING
 * light colors
 * player
-* search
 * settings
 * friend activity
