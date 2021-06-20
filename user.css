@@ -3,6 +3,7 @@
   --border-radius-2: 8px;
   --border-radius-3: 4px;
   --scrollbars: unset;
+  --green: #1db954;
 }
 /* scrollbars */
 .os-scrollbar {
@@ -20,8 +21,11 @@ div, img, ul {
 .main-home-homeHeader, .main-actionBarBackground-background {
   background-image: none;
 }
-.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background, .main-topBar-overlay {
+.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background, .main-topBar-overlay, .x-entityHeader-overlay, .x-actionBarBackground-background {
   background-color: var(--spice-main) !important;
+}
+.x-actionBarBackground-background, .x-entityHeader-overlay {
+  background-image: none !important;
 }
 .main-entityHeader-backgroundColor {
   background: var(--spice-main);
@@ -33,7 +37,7 @@ div, img, ul {
 .now-playing-bar-container, ._6e96ad0ba78d75ffb2a0156aa1834a21-scss {
   border-top: none;
 }
-.main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after {
+.main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after, .show-episodeList-divider {
   display: none;
 }
 /* cards */
@@ -86,7 +90,7 @@ div, img, ul {
 }
 /* buttons */
 .main-playButton-PlayButton.main-playButton-primary {
-  color: var(--spice-card);
+  color: var(--spice-shadow);
 }
 .player-controls__buttons > button:not(.main-playPauseButton-button), .control-button {
   color: var(--spice-button);
@@ -104,7 +108,7 @@ div, img, ul {
 }
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:hover, .main-navBar-navBarLinkActive:active, .main-navBar-navBarLinkActive:focus {
   background-color: var(--spice-selected-row);
-  color: var(--spice-card);
+  color: var(--spice-shadow);
 }
 /* playlist sidebar */
 .main-createPlaylistButton-button, ._6b5bc370e9834a4932f57284a96a0748-scss, ._928aa704d6ac22c1e288a4ddbed11a40-scss {
@@ -138,22 +142,23 @@ div, img, ul {
   background-color: rgba(var(--spice-rgb-selected-row),.05);
 }
 .main-rootlist-rootlistItemLink:active, .main-createPlaylistButton-button:active, .ac0df040748287f39652cc42e3b762ba-scss:active {
-  background-color: rgba(var(--spice-selected-row),.1);
+  background-color: rgba(var(--spice-rgb-selected-row),.1);
 }
 .main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
   background-color: var(--spice-selected-row);
 }
 .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
-  color: var(--spice-card);
+  color: var(--spice-shadow);
 }
 /* tracklist */
  .main-trackList-indexable .main-virtualScrollList-wrapper {
   background-color: var(--spice-card);
-  border-radius: var(--border-radius-1);
+  border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
   padding: 8px;
 }
 .main-trackList-indexable {
   border-bottom: 16px solid var(--spice-card);
+  border-radius: 0 0 var(--border-radius-1) var(--border-radius-1);
 }
 .main-trackList-trackListRow {
   border-radius: var(--border-radius-2);
@@ -169,13 +174,13 @@ div, img, ul {
 }
 .main-trackList-trackListRow.main-trackList-selected .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:hover .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:active .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:focus .main-tag-container {
   color: var(--spice-selected-row) !important;
-  background-color: var(--spice-card);
+  background-color: var(--spice-shadow);
 }
 .main-tag-container, .main-trackList-rowImage {
   border-radius: var(--border-radius-3);
 }
 .main-trackList-trackListRow.main-trackList-selected span, .main-trackList-trackListRow.main-trackList-selected:hover span, .main-trackList-trackListRow.main-trackList-selected:active span, .main-trackList-trackListRow.main-trackList-selected:focus span, .main-trackList-trackListRow.main-trackList-selected a, .main-trackList-trackListRow.main-trackList-selected:hover a, .main-trackList-trackListRow.main-trackList-selected:active a, .main-trackList-trackListRow.main-trackList-selected:focus a, .main-trackList-trackListRow.main-trackList-selected button, .main-trackList-trackListRow.main-trackList-selected:hover button, .main-trackList-trackListRow.main-trackList-selected:active button, .main-trackList-trackListRow.main-trackList-selected:focus button, .main-trackList-trackListRow.main-trackList-selected div, .main-trackList-trackListRow.main-trackList-selected:hover div, .main-trackList-trackListRow.main-trackList-selected:active div, .main-trackList-trackListRow.main-trackList-selected:focus div {
-  color: var(--spice-card) !important;
+  color: var(--spice-shadow) !important;
 }
 .main-trackList-trackListHeader {
   margin-bottom: 8px;
@@ -184,10 +189,16 @@ div, img, ul {
   border: 1px solid var(--spice-text);
 }
 .main-trackList-trackListRow.main-trackList-selected ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:hover ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:active ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:focus ._110dbc41d89af63f97cdd8b7cd7fea47-scss {
-  border: 1px solid var(--spice-card);
+  border: 1px solid var(--spice-shadow);
 }
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
   border-bottom: none;
+}
+.main-trackList-statusChangeUp {
+  color: var(--green);
+}
+.main-trackList-playingIcon {
+  background-image: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
 }
 /* headers */
 .main-entityHeader-image {
@@ -196,7 +207,7 @@ div, img, ul {
 .x-sortBox-sortDropdown, .x-filterBox-filterInput, .x-filterBox-expandButton:focus, .x-filterBox-expandButton:hover {
   border-radius: var(--border-radius-2) !important;
 }
-.main-actionBar-ActionBarRow > button:not(:first-child) {
+.main-actionBar-ActionBarRow > button:not(:first-child), .x-actionBar-ActionButtonsRow > div > button {
   color: var(--spice-button);
 }
 /* artist page */
@@ -218,4 +229,20 @@ div, img, ul {
 }
 .main-entityHeader-background {
   transform: none !important;
+}
+/* podcasts */
+.show-trailer-container, .show-episodeBlock-episodeBlock, .show-show-episodes > :last-child {
+  border-radius: var(--border-radius-1) !important;
+}
+.show-episodeBlock-episodeBlock:hover {
+  background-color: rgba(var(--spice-rgb-selected-row),.05);
+}
+.show-episodeBlock-episodeBlock:active {
+  background-color: rgba(var(--spice-rgb-selected-row),.1);
+}
+.show-show-episodes > :last-child {
+  padding: 8px 24px;
+}
+.show-trailer-container, .show-show-episodes > :last-child {
+  background-color: var(--spice-card) !important;
 }
