@@ -219,14 +219,14 @@ button.switch {
 .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
 }
-.main-trackList-trackListRow.main-trackList-selected .main-trackList-playingIcon {
+.main-trackList-selected .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
 }
 /* light mode
 .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
 }
-.main-trackList-trackListRow.main-trackList-selected .main-trackList-playingIcon {
+.main-trackList-selected .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
 } */
 /* headers */
