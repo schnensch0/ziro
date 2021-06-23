@@ -14,7 +14,7 @@
   background: var(--spice-button-disabled) !important;
 }
 /* remove shadows */
-div, img, ul {
+* {
   box-shadow: none !important;
 }
 /* remove gradients */
@@ -66,7 +66,7 @@ div, img, ul {
   border-radius: var(--border-radius-1);
 }
 /* menus */
-.main-contextMenu-menuItemButton, ._8e566af0d3a8e6834c933615bbb634ba-scss {
+.main-contextMenu-menuItemButton, .main-userWidget-dropDownMenuItemButton {
   border-radius: var(--border-radius-2);
   color: var(--spice-text);
   height: 32px;
@@ -92,7 +92,7 @@ div, img, ul {
 .main-playButton-PlayButton.main-playButton-primary, .main-pageErrorTemplate-errorButton {
   color: var(--spice-shadow);
 }
-.player-controls__buttons > button:not(.main-playPauseButton-button), .control-button {
+.main-skipBackButton-button, .main-skipForwardButton-button, .control-button {
   color: var(--spice-button);
 }
 button.switch {
@@ -215,9 +215,20 @@ button.switch {
 .main-trackList-statusChangeUp {
   color: var(--green);
 }
+/* dark mode */
 .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
 }
+.main-trackList-trackListRow.main-trackList-selected .main-trackList-playingIcon {
+  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
+}
+/* light mode
+.main-trackList-playingIcon {
+  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
+}
+.main-trackList-trackListRow.main-trackList-selected .main-trackList-playingIcon {
+  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
+} */
 /* headers */
 .main-entityHeader-image:not(.main-entityHeader-circle) {
   border-radius: var(--border-radius-1);
@@ -286,11 +297,11 @@ a[class*='-tabBar-headerItemLink']:active {
 }
 /* search */
 .x-searchInput-searchInputInput {
-  background-color: var(--spice-button-disabled);
+  background-color: var(--spice-card);
   color: var(--spice-text) !important;
-  border-radius: var(--border-radius-1);
+  border-radius: var(--border-radius-2) !important;
 }
-.x-searchInput-searchInputSearchIcon, .x-searchInput-searchInputInput::placeholder {
+.x-searchInput-searchInputSearchIcon, .x-searchInput-searchInputInput::placeholder, .x-searchInput-searchInputClearButton {
   color: var(--spice-text) !important;
 }
 .x-searchResultsTracks-root .main-gridContainer-gridContainer {
@@ -305,7 +316,125 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   color: var(--spice-notification-error);
 }
 /* modals */
-.main-trackCreditsModal-container {
+.main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container {
   background-color: var(--spice-main);
   border-radius: var(--border-radius-1);
+}
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus {
+  background-color: var(--spice-card);
+}
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea {
+  border-radius: var(--border-radius-2);
+}
+.main-playlistEditDetailsModal-labelText {
+  bottom: 8px;
+}
+.main-playlistEditDetailsModal-titleInput::placeholder, .main-playlistEditDetailsModal-descriptionTextarea::placeholder {
+  color: var(--spice-text);
+}
+/* friend activity */
+.main-buddyFeed-username a {
+  color: var(--spice-text) !important;
+}
+.main-buddyFeed-artistAndTrackName a, .main-buddyFeed-activityMetadata, .main-buddyFeed-playbackContextLink {
+  color: var(--spice-subtext) !important;
+}
+.main-buddyFeed-friendActivity {
+  background-color: var(--spice-card);
+  border-radius: var(--border-radius-1);
+  margin: 8px;
+  padding: 8px 8px 8px 12px;
+}
+.main-buddyFeed-addFriendsContainer {
+  background-color: var(--spice-main);
+}
+.main-buddyFeed-buddyFeedRoot, .main-buddyFeed-buddyFeed {
+  width: 280px;
+}
+.main-buddyFeed-activityMetadata {
+  max-width: 190px;
+}
+/* settings */
+.main-dropDown-dropDown {
+  background-color: var(--spice-card) !important;
+  border-radius: var(--border-radius-2) !important;
+}
+.x-toggle-indicator {
+  background-color: var(--spice-card) !important;
+}
+.x-settings-facebookButton, .main-connectToFacebook-facebookButton {
+  color: var(--spice-shadow);
+}
+input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-subtext),.3) !important;
+}
+/* device menu */
+._9eb5acf729a98d62135ca21777fef244-scss {
+  color: var(--spice-shadow);
+}
+.connect-device-list-container {
+  border-radius: var(--border-radius-1);
+}
+.connect-device-list-item {
+  margin: 0 8px;
+  border-radius: var(--border-radius-2);
+  width: -webkit-fill-available;
+}
+.connect-device-list-item:last-child {
+  margin: 0 8px 8px;
+}
+.connect-device-list-item:focus, .connect-device-list-item:hover {
+  background-color: rgba(var(--spice-rgb-selected-row),0.05);
+}
+/* player */
+.now-playing-bar .cover-art-image {
+  border-radius: var(--border-radius-2);
+}
+.playback-bar__progress-time {
+  display: none;
+}
+.progress-bar__slider {
+  opacity: 1;
+  background-color: var(--spice-card);
+  border: 2px solid var(--spice-button)
+}
+.playback-bar .progress-bar__slider {
+  width: 20px;
+  height: 20px;
+}
+.volume-bar .progress-bar__slider {
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+}
+.volume-bar {
+  margin-right: 8px;
+}
+.main-playPauseButton-button, .player-controls__buttons > button:not(.main-playPauseButton-button) {
+  --button-size: 48px !important;
+}
+.main-seekBack15sButton-button, .main-seekForward15sButton-button, .main-speedControlsButton-button {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  color: var(--spice-button);
+}
+.main-playPauseButton-button svg {
+  height: 24px;
+  width: 24px;
+}
+.progress-bar--is-active .progress-bar__slider:focus {
+  background-color: var(--spice-button);
+}
+.playback-bar {
+  width: 100%;
+  bottom: 83px;
+  position: absolute;
+}
+.playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper, .playback-bar .progress-bar__fg {
+  border-radius: 0;
+  height: 6px;
+}
+.player-controls__buttons {
+  margin-bottom: 0;
 }
