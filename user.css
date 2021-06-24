@@ -63,7 +63,11 @@
 }
 /* headers */
 .main-entityHeader-withBackgroundImage {
-  border-radius: var(--border-radius-1);
+  padding: 0 64px 24px;
+  margin-top: 48px;
+}
+.main-entityHeader-title {
+  font-size: unset;
 }
 /* menus */
 .main-contextMenu-menuItemButton, .main-userWidget-dropDownMenuItemButton {
@@ -215,14 +219,14 @@ button.switch {
 .main-trackList-statusChangeUp {
   color: var(--green);
 }
-/* dark mode */
+  /* dark mode */
 .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
 }
 .main-trackList-selected .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
 }
-/* light mode
+  /* light mode
 .main-trackList-playingIcon {
   content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
 }
@@ -260,7 +264,8 @@ button.switch {
   background-color: rgba(var(--spice-rgb-selected-row),.1) !important;
 }
 .main-entityHeader-background {
-  transform: none !important;
+  transform: scale(0.95) !important;
+  margin-top: 48px;
 }
 /* podcasts */
 .show-trailer-container, .show-episodeBlock-episodeBlock, .show-show-episodes > :last-child {
@@ -316,17 +321,23 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   color: var(--spice-notification-error);
 }
 /* modals */
-.main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container {
-  background-color: var(--spice-main);
-  border-radius: var(--border-radius-1);
+.main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container, .profile-userEditDetails-container, .artist-artistAbout-modal {
+  background-color: var(--spice-main) !important;
+  border-radius: var(--border-radius-1) !important;
 }
 .main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus {
   background-color: var(--spice-card);
 }
-.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea {
-  border-radius: var(--border-radius-2);
+.profile-userEditDetails-nameInput, .profile-userEditDetails-textElement:focus {
+  background: var(--spice-card) !important;
 }
-.main-playlistEditDetailsModal-labelText {
+.main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .profile-userEditDetails-textElement:focus {
+  border-color: var(--spice-button-active) !important;
+}
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .profile-userEditDetails-nameInput {
+  border-radius: var(--border-radius-2) !important;
+}
+.main-playlistEditDetailsModal-labelText, .profile-userEditDetails-labelText {
   bottom: 8px;
 }
 .main-playlistEditDetailsModal-titleInput::placeholder, .main-playlistEditDetailsModal-descriptionTextarea::placeholder {
@@ -374,6 +385,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 }
 .connect-device-list-container {
   border-radius: var(--border-radius-1);
+  border: 1px solid var(--spice-button-disabled);
 }
 .connect-device-list-item {
   margin: 0 8px;
@@ -391,7 +403,16 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   border-radius: var(--border-radius-2);
 }
 .playback-bar__progress-time {
-  display: none;
+  position: absolute;
+  bottom: -48px;
+  right: 250px;
+  color: var(--spice-text) !important;
+}
+.playback-bar__progress-time:first-child {
+  margin-right: 30px;
+}
+.playback-bar__progress-time:first-child::after {
+  content: " /";
 }
 .progress-bar__slider {
   opacity: 1;
@@ -412,6 +433,9 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 }
 .main-playPauseButton-button, .player-controls__buttons > button:not(.main-playPauseButton-button) {
   --button-size: 48px !important;
+}
+.main-shuffleButton-button.main-shuffleButton-on:after, .main-repeatButton-button.main-repeatButton-on:after {
+  bottom: 4px;
 }
 .main-seekBack15sButton-button, .main-seekForward15sButton-button, .main-speedControlsButton-button {
   width: 48px;
@@ -437,4 +461,27 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 }
 .player-controls__buttons {
   margin-bottom: 0;
+}
+/* ads */
+.desktoproutes-homepage-takeover-ad-hptoHtml-slot {
+  border-radius: var(--border-radius-1) !important;
+}
+.desktoproutes-homepage-takeover-ad-floatingTagOrButton-hideButton:focus, .desktoproutes-homepage-takeover-ad-floatingTagOrButton-hideButton:hover {
+  background-color: var(--spice-button-disabled) !important;
+}
+/* fullscreen */
+.npv-up-next {
+  border-radius: var(--border-radius-1);
+}
+.npv-cover-art img {
+  border-radius: calc(var(--border-radius-1)*4);
+}
+.npv-up-next__image {
+  border-radius: var(--border-radius-2);
+}
+.npv-up-next {
+  border: none !important;
+}
+.npv-progress-bar__rail {
+  height: 6px;
 }
