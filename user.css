@@ -102,6 +102,21 @@
 button.switch {
   background-color: transparent !important;
 }
+#spicetify-home-config button, #spicetify-sidebar-config button {
+  background-color: var(--spice-button) !important;
+  color: var(--spice-shadow) !important;
+  border: none !important;
+}
+#spicetify-home-config button {
+    border-radius: var(--border-radius-2) !important;
+}
+#spicetify-sidebar-config button {
+    border-radius: var(--border-radius-3) !important;
+}
+#spicetify-home-config button:disabled, #spicetify-sidebar-config button:disabled {
+  background-color: var(--spice-button-disabled) !important;
+  color: var(--spice-text) !important;
+}
 /* category sidebar */
 .main-navBar-navBarLink {
   border-radius: var(--border-radius-2);
@@ -342,6 +357,18 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 .main-playlistEditDetailsModal-titleInput::placeholder, .main-playlistEditDetailsModal-descriptionTextarea::placeholder {
   color: var(--spice-text);
+}
+/* dialogs */
+.main-deletePlaylistDialog-container {
+  background-color: var(--spice-card);
+  color: var(--spice-text);
+  border-radius: var(--border-radius-1);
+}
+.main-deletePlaylistDialog-secondaryButton {
+  color: var(--spice-button);
+}
+.main-deletePlaylistDialog-buttonContainer>:last-child {
+  background-color: var(--spice-notification-error);
 }
 /* friend activity */
 .main-buddyFeed-username a {
