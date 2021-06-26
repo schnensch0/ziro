@@ -57,10 +57,6 @@
 .link-subtle {
   transition-duration: 150ms;
 }
-/* player */
-.progress-bar {
-  --fg-color: var(--spice-button-active);
-}
 /* headers */
 .main-entityHeader-withBackgroundImage {
   padding: 0 64px 24px;
@@ -452,7 +448,15 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .connect-device-list-item:focus, .connect-device-list-item:hover {
   background-color: rgba(var(--spice-rgb-selected-row),0.05);
 }
+.connect-header {
+  background-color: var(--spice-shadow);
+  margin: 8px;
+  border-radius: var(--border-radius-1);
+}
 /* player */
+.progress-bar {
+  --fg-color: var(--spice-button-active);
+}
 .now-playing-bar .cover-art-image {
   border-radius: var(--border-radius-2);
 }
@@ -508,6 +512,9 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   width: 100%;
   bottom: 83px;
   position: absolute;
+}
+.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar {
+  bottom: 107px;
 }
 .playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper, .playback-bar .progress-bar__fg {
   border-radius: 0;
