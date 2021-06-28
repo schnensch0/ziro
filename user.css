@@ -135,6 +135,9 @@ button.switch {
 ._6b5bc370e9834a4932f57284a96a0748-scss, .main-createPlaylistButton-button, .main-createPlaylistButton-svg, .ac0df040748287f39652cc42e3b762ba-scss, .main-collectionLinkButton-collectionLinkButton {
   border-radius: var(--border-radius-2) !important;
 }
+.main-createPlaylistButton-createPlaylistIcon, .main-likedSongsButton-likedSongsIcon, .main-yourEpisodesButton-yourEpisodesIcon {
+  border-radius: var(--border-radius-3);
+}
 .main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited, .main-rootlist-rootlistPlaylistHeader {
   color: var(--spice-text);
 }
@@ -349,20 +352,23 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   background-color: var(--spice-main) !important;
   border-radius: var(--border-radius-1) !important;
 }
-.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus {
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .playlist-inlineSearchBox-filterInput {
   background-color: var(--spice-card);
 }
 .profile-userEditDetails-nameInput, .profile-userEditDetails-textElement:focus {
   background: var(--spice-card) !important;
 }
-.main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .profile-userEditDetails-textElement:focus {
-  border-color: var(--spice-button-active) !important;
+.main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .profile-userEditDetails-textElement:focus, .playlist-inlineSearchBox-filterInput:focus {
+  border: 1px solid var(--spice-button-active) !important;
 }
-.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .profile-userEditDetails-nameInput {
+.playlist-inlineSearchBox-filterInput {
+  border: 1px solid var(--spice-card);
+}
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .profile-userEditDetails-nameInput, .playlist-inlineSearchBox-filterInput {
   border-radius: var(--border-radius-2) !important;
 }
-.main-playlistEditDetailsModal-labelText, .profile-userEditDetails-labelText {
-  bottom: 8px;
+.profile-userEditDetails-labelText:before {
+  bottom: 8px !important;
 }
 .main-playlistEditDetailsModal-titleInput::placeholder, .main-playlistEditDetailsModal-descriptionTextarea::placeholder {
   color: var(--spice-text);
