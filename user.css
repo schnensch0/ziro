@@ -237,7 +237,7 @@ button.switch {
 ._110dbc41d89af63f97cdd8b7cd7fea47-scss {
   border: 1px solid var(--spice-text);
 }
-.main-trackList-trackListRow.main-trackList-selected ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:hover ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:active ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:focus ._110dbc41d89af63f97cdd8b7cd7fea47-scss {
+.main-trackList-trackListRow.main-trackList-selected ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:hover ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:active ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:focus ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected .main-button-outlined {
   border: 1px solid var(--spice-shadow);
 }
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
@@ -402,7 +402,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   max-width: 190px;
 }
 /* settings */
-.main-dropDown-dropDown , option {
+.main-dropDown-dropDown, option {
   background-color: var(--spice-card) !important;
 }
 .main-dropDown-dropDown {
