@@ -12,8 +12,12 @@ spicetify config current_theme Ziro
 spicetify apply
 ```
 
-![Mockup](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/mockup.png)
-for actual previews look [here](https://github.com/schnensch0/ziro/tree/main/img/preview)
+![Mockup](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.png)
+for actual previews look [here](https://github.com/schnensch0/ziro/tree/main/preview)
 
 ### TO DO
 * more accent colors
+
+### CREDITS
+
+Playing Icon SVG by [CharlieS](https://github.com/CharlieS1103) and [harbassan](https://github.com/harbassan) in [this discussion](https://github.com/morpheusthewhite/spicetify-themes/discussions/435)
