@@ -44,11 +44,11 @@
 .main-cardImage-image, .main-cardImage-imageWrapper {
   border-radius: var(--border-radius-2);
 }
-.main-card-card, .x-heroCategoryCard-HeroCategoryCard, .x-categoryCard-CategoryCard, .main-heroCard-card {
-  border-radius: var(--border-radius-1);
+.main-card-card, .x-heroCategoryCard-HeroCategoryCard, .x-categoryCard-CategoryCard, .main-heroCard-card, .view-homeShortcutsGrid-shortcut, .view-homeShortcutsGrid-image {
+  border-radius: var(--border-radius-1) !important;
 }
-.main-card-card {
-  background-color: var(--spice-card);
+.main-card-card, .view-homeShortcutsGrid-shortcut {
+  background-color: var(--spice-card) !important;
 }
 /* transitions */
 .main-card-card {
