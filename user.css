@@ -18,13 +18,13 @@
   box-shadow: none !important;
 }
 /* remove gradients */
-.main-home-homeHeader, .main-actionBarBackground-background {
+.main-home-homeHeader, .main-actionBarBackground-background, .We1fExPHxLIRmV0rZGNo {
   background-image: none;
 }
-.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background, .main-topBar-overlay, .x-entityHeader-overlay, .x-actionBarBackground-background {
+.main-actionBarBackground-background, .main-home-homeHeader, .euOnte9wvOF0D_SGxEZ9, .main-topBar-background, .main-topBar-overlay, .x-entityHeader-overlay, .x-actionBarBackground-background, .We1fExPHxLIRmV0rZGNo {
   background-color: var(--spice-main) !important;
 }
-.x-actionBarBackground-background, .x-entityHeader-overlay {
+.x-actionBarBackground-background, .x-entityHeader-overlay, .euOnte9wvOF0D_SGxEZ9 {
   background-image: none !important;
 }
 .main-entityHeader-backgroundColor {
@@ -142,7 +142,8 @@ button.switch {
   color: var(--spice-text);
 }
 .ac0df040748287f39652cc42e3b762ba-scss, .main-createPlaylistButton-button, .main-collectionLinkButton-collectionLinkButton {
-  padding: 0 12px !important;
+  padding: 8px 16px !important;
+  margin: 0 8px;
 }
 .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
   margin-top: 24px;
@@ -183,15 +184,15 @@ button.switch {
 .main-rootlist-rootlistItemLink:active, .main-createPlaylistButton-button:active, .ac0df040748287f39652cc42e3b762ba-scss:active, .main-collectionLinkButton-collectionLinkButton:active {
   background-color: rgba(var(--spice-rgb-selected-row),.1);
 }
-.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover {
+.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover {
   background-color: var(--spice-selected-row);
 }
-.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected {
+.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active {
   background: var(--spice-selected-row) !important;
   color: var(--spice-shadow);
 }
-.main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
-  color: var(--spice-shadow);
+.main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover {
+  color: var(--spice-shadow) !important;
 }
 .main-rootlist-statusIcons > button {
   color: var(--spice-text);
@@ -202,8 +203,11 @@ button.switch {
 .main-rootlist-rootlistPlaylistHeader {
   display: none;
 }
+.u7oC25XjY_zFHiqpit_W {
+  margin-top: 0;
+}
 /* tracklist */
- .main-trackList-indexable .main-virtualScrollList-wrapper, .main-trackList-indexable .main-rootlist-wrapper {
+ .main-trackList-trackList .main-virtualScrollList-wrapper, .main-trackList-trackList .main-rootlist-wrapper, .main-trackList-trackList .vB_gmMwzmB3GcEliiiys {
   background-color: var(--spice-card);
   border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
   padding: 8px;
