@@ -280,7 +280,8 @@
 /* tab bar */
 .oaNVBli46GtVjaQKB15g,
 .marketplace-tabBar-active,
-.lyrics-tabBar-active {
+.lyrics-tabBar-active,
+.queue-tabBar-active {
   color: var(--spice-shadow);
   background: var(--spice-tab-active) !important;
 }
